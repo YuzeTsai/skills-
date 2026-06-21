@@ -24,7 +24,7 @@ Designed with Taiwanese students in mind, but applicable to any applicant.
 
 | Command | Function |
 |---|---|
-| `/school` | Generate a customized school list (Dream / Match / Safety) with rationale and fit analysis |
+| `/school` | Generate a customized school list (Dream / Match / Safety) — uses live web agents to fetch real deadlines, admission stats, tuition, and faculty from official program pages |
 | `/essay [SOP/PS/CV]` | Essay coaching — structure feedback, paragraph-level comments, rewrite suggestions |
 | `/plan` | Build a full application timeline working backwards from deadlines |
 
@@ -43,6 +43,8 @@ Designed with Taiwanese students in mind, but applicable to any applicant.
 - Documents: SOP, Personal Statement, CV/Resume, recommendation letter prep
 
 **Advisor style:** Honest, specific, no empty encouragement. Every suggestion comes with reasoning and tradeoffs.
+
+**Dependencies:** `/school` mode uses `firecrawl_search` + `firecrawl_scrape` (falls back to `WebSearch` + `WebFetch` if unavailable). Install the [Firecrawl MCP](https://github.com/mendableai/firecrawl-mcp-server) for best results.
 
 ---
 

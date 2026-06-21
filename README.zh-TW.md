@@ -23,7 +23,7 @@
 
 | 指令 | 功能 |
 |---|---|
-| `/school` | 產出客製化選校清單（Dream / Match / Safety），附推薦理由與勝算分析 |
+| `/school` | 產出客製化選校清單（Dream / Match / Safety）——透過 web agent 即時抓取各校官網的截止日期、錄取統計、學費與相關教授 |
 | `/essay [SOP/PS/CV]` | 文書協助——結構建議、逐段批注、改寫方向 |
 | `/plan` | 從 Deadline 倒推，產出完整申請時程表 |
 
@@ -42,6 +42,8 @@
 - 文件：SOP、PS、CV / Resume、推薦信素材準備
 
 **顧問風格：** 誠實直白，不說空洞鼓勵。每個建議都附上理由與潛在風險。
+
+**依賴工具：** `/school` 模式需要 `firecrawl_search` + `firecrawl_scrape`（若不可用會 fallback 至 `WebSearch` + `WebFetch`）。建議安裝 [Firecrawl MCP](https://github.com/mendableai/firecrawl-mcp-server) 以獲得最佳效果。
 
 ---
 
